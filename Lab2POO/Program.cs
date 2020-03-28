@@ -29,22 +29,11 @@ namespace Lab2POO
             }
             if (respuesta == "2")
             {
-                Console.WriteLine("Introduzca el Género:");
-                genero = Console.ReadLine();
-                Console.WriteLine("Introduzca el Artista:");
-                artista = Console.ReadLine();
-                Console.WriteLine("Introduzca el Album:");
-                album = Console.ReadLine();
-                Console.WriteLine("Introduzca el Nombre:");
-                nombre = Console.ReadLine();
-                Cancion cancion1 = new Cancion(genero, artista, album, nombre);
-                Spotify spotify = new Spotify(new Cancion[] {cancion1});
-                Console.WriteLine(cancion1.Informacion());
                 //Espotifai.AgregarCancion()
             }
             if (respuesta == "3")
             {
-                Console.WriteLine("Chao qlo xd");
+                Console.WriteLine("Saliendo de Spotify...");
             }
             else
             {
