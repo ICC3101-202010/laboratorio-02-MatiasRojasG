@@ -18,14 +18,14 @@ namespace Lab2POO
             Console.WriteLine(" ");
             Console.WriteLine("2) Agregar Cancion");
             Console.WriteLine(" ");
-            Console.WriteLine("3) Salir de Espotifai");
+            Console.WriteLine("3) Salir de Spotify");
             Console.WriteLine(" ");
 
             
             respuesta = Console.ReadLine();
             if (respuesta == "1")
             {
-                //Espotifai.VerCanciones()
+                Console.WriteLine(Spotify.VerCanciones());
             }
             if (respuesta == "2")
             {
