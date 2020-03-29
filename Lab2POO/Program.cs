@@ -11,6 +11,12 @@ namespace Lab2POO
     {
         public static void Main(string[] args)
         {
+            List<Cancion> canciones = new List<Cancion>();
+            Cancion ola = new Cancion("a", "b", "c", "d");
+            //Cancion ola1=new Cancion("1", "2", "3", "4");
+            //canciones.Add(ola);
+            //canciones.Add(ola1);
+
             string genero;
             string artista;
             string album;
@@ -27,31 +33,48 @@ namespace Lab2POO
             Console.WriteLine(" ");
 
             respuesta = Console.ReadLine();
+
             if (respuesta == "1")
             {
-                Spotify.VerCanciones(); //error 1
+                foreach (Cancion iden in canciones)
+            {
+              iden.Informacion();
             }
+
+            }
+
+
             if (respuesta == "2")
             {
-                Console.WriteLine("Ingrese el genero de la cancion:");
-                genero = Console.ReadLine();
-                Console.WriteLine("Ingrese al artista de la cancion:");
-                artista = Console.ReadLine();
-                Console.WriteLine("Ingrese el album de la cancion:");
-                album = Console.ReadLine();
-                Console.WriteLine("Ingrese el nombre de la cancion:");
-                nombre = Console.ReadLine();
-                Cancion cancion1 = new Cancion(genero, artista, album, nombre);
-                Spotify.AgregarCancion(Cancion, cancion1); //error 2
+                  Console.WriteLine("Ingrese el genero de la cancion:");
+                  genero = Console.ReadLine();
+                  Console.WriteLine("Ingrese al artista de la cancion:");
+                  artista = Console.ReadLine();
+                  Console.WriteLine("Ingrese el album de la cancion:");
+                  album = Console.ReadLine();
+                  Console.WriteLine("Ingrese el nombre de la cancion:");
+                  nombre = Console.ReadLine();
+                  Cancion cancion1 = new Cancion(genero, artista, album, nombre);
+                if (canciones.Contains(cancion1))
+                {
+                    Console.WriteLine("Ya esta la cancion");
+                }
+                else
+                {
+                    canciones.Add(cancion1);
+                    Console.WriteLine("Agregada");
+                }
+
             }
+
             if (respuesta == "3")
             {
-                Console.WriteLine("Saliendo de Spotify...");
+                  Console.WriteLine("Saliendo de Spotify...");
             }
             else
-            {
-                Console.WriteLine("Opcion no valida");
+                {
+                    Console.WriteLine("Debe ingresar un numero. ERROR...");
+                }
             }
         }
     }
-}
