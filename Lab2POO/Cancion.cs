@@ -18,6 +18,7 @@ namespace Lab2POO
             this.Nombre = Nombre;
 
         }
+        //Constructor
         public Cancion()
         {
             Genero = "Pop";

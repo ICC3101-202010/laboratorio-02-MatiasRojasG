@@ -25,11 +25,19 @@ namespace Lab2POO
             respuesta = Console.ReadLine();
             if (respuesta == "1")
             {
-                Console.WriteLine(Spotify.VerCanciones());
             }
             if (respuesta == "2")
             {
-                //Espotifai.AgregarCancion()
+                Console.WriteLine("Ingrese el genero de la cancion:");
+                genero = Console.ReadLine();
+                Console.WriteLine("Ingrese al artista de la cancion:");
+                artista = Console.ReadLine();
+                Console.WriteLine("Ingrese el album de la cancion:");
+                album = Console.ReadLine();
+                Console.WriteLine("Ingrese el nombre de la cancion:");
+                nombre = Console.ReadLine();
+                Cancion cancion1 = new Cancion(genero, artista, album, nombre);
+                Spotify.AgregarCancion(cancion1);
             }
             if (respuesta == "3")
             {

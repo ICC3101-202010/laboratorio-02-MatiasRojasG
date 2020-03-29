@@ -1,22 +1,44 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
 namespace Lab2POO
 {
     public class Spotify
     {
+        //Creo una lista de strings
+        List<Cancion> canciones = new List<Cancion>();
+
+        public static void AgregarCancion(Cancion cancion)
+        {
+            canciones.Add(cancion);
+           
+        }
         public void VerCanciones()
         {
-            string[] array = new string[2];
-            array[0] = "hola";
-            array[1] = "como";
-            int i;
-            for (i = 0; i < 2; i++)
-            {
-                Console.WriteLine(array[i]);
-            }
+            canciones.ToString();
         }
+
+
+
+
+
+
+
+
+
+
+        //Arreglo
+        //public string VerCanciones()
+        //{ 
+        //        return Canciones.Informacion()
+        //}
         //public bool AgregarCancion()
         //{
-        //Agregar cancion al arreglo
+
         //}
 
 
