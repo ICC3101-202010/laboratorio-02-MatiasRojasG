@@ -17,7 +17,7 @@ namespace Lab2POO
             canciones.Add(cancion);
             return true;
         }
-        public void VerCanciones()
+        public void VerCanciones(canciones)
         {
             foreach(Cancion iden in canciones)
             {

@@ -24,7 +24,7 @@ namespace Lab2POO
             respuesta = Console.ReadLine();
             if (respuesta == "1")
             {
-                Spotify.VerCanciones();
+                Spotify.VerCanciones(canciones);
             }
             if (respuesta == "2")
             {
