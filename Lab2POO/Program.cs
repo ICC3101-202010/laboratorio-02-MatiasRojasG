@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
 
 namespace Lab2POO
 {
@@ -24,7 +29,7 @@ namespace Lab2POO
             respuesta = Console.ReadLine();
             if (respuesta == "1")
             {
-                Spotify.VerCanciones(canciones);
+                Spotify.VerCanciones(); //error 1
             }
             if (respuesta == "2")
             {
@@ -37,7 +42,7 @@ namespace Lab2POO
                 Console.WriteLine("Ingrese el nombre de la cancion:");
                 nombre = Console.ReadLine();
                 Cancion cancion1 = new Cancion(genero, artista, album, nombre);
-                Spotify.AgregarCancion(Cancion cancion1);
+                Spotify.AgregarCancion(Cancion, cancion1); //error 2
             }
             if (respuesta == "3")
             {
@@ -47,11 +52,6 @@ namespace Lab2POO
             {
                 Console.WriteLine("Opcion no valida");
             }
-
-
-
-
-
         }
     }
 }

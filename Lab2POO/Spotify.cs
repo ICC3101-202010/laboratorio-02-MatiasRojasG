@@ -11,13 +11,19 @@ namespace Lab2POO
     {
         List<Cancion> canciones = new List<Cancion>();
 
-
         public bool AgregarCancion(Cancion cancion)
         {
-            canciones.Add(cancion);
-            return true;
+            if (canciones.Contains(cancion))
+            {
+                return false;
+            }
+            else
+            {
+                canciones.Add(cancion);
+                return true;
+            }
         }
-        public void VerCanciones(canciones)
+        public void VerCanciones()
         {
             foreach(Cancion iden in canciones)
             {
