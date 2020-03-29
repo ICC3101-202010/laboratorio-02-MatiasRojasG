@@ -21,10 +21,10 @@ namespace Lab2POO
             Console.WriteLine("3) Salir de Spotify");
             Console.WriteLine(" ");
 
-            
             respuesta = Console.ReadLine();
             if (respuesta == "1")
             {
+                Spotify.VerCanciones();
             }
             if (respuesta == "2")
             {
@@ -37,7 +37,7 @@ namespace Lab2POO
                 Console.WriteLine("Ingrese el nombre de la cancion:");
                 nombre = Console.ReadLine();
                 Cancion cancion1 = new Cancion(genero, artista, album, nombre);
-                Spotify.AgregarCancion(cancion1);
+                Spotify.AgregarCancion(Cancion cancion1);
             }
             if (respuesta == "3")
             {

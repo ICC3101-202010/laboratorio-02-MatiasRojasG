@@ -9,51 +9,21 @@ namespace Lab2POO
 {
     public class Spotify
     {
-        //Creo una lista de strings
         List<Cancion> canciones = new List<Cancion>();
 
-        public static void AgregarCancion(Cancion cancion)
+
+        public bool AgregarCancion(Cancion cancion)
         {
             canciones.Add(cancion);
-           
+            return true;
         }
         public void VerCanciones()
         {
-            canciones.ToString();
+            foreach(Cancion iden in canciones)
+            {
+                Console.WriteLine(iden.Informacion());
+            }
         }
-
-
-
-
-
-
-
-
-
-
-        //Arreglo
-        //public string VerCanciones()
-        //{ 
-        //        return Canciones.Informacion()
-        //}
-        //public bool AgregarCancion()
-        //{
-
-        //}
-
-
-        //Dentro de Agregar Cancion
-        //Console.WriteLine("Ingrese el genero de la cancion:");
-        //genero = Console.ReadLine();
-        //Console.WriteLine("Ingrese al artista de la cancion:");
-        //artista = Console.ReadLine();
-        //Console.WriteLine("Ingrese el album de la cancion:");
-        //album = Console.ReadLine();
-        //Console.WriteLine("Ingrese el nombre de la cancion:");
-        //nombre = Console.ReadLine();
-        //Cancion primeracancion = new Cancion(genero, artista, album, nombre);
-        // Se agrega la cancion
-
 
     }
 }
