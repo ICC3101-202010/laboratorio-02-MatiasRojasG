@@ -15,7 +15,8 @@ namespace Lab2POO
         {
 
         }
-        public bool AgregarCancion(Cancion cancion, List<Cancion> canciones)
+
+        public bool AgregarCancion(Cancion cancion)
         {
             if (canciones.Contains(cancion))
             {
@@ -32,7 +33,7 @@ namespace Lab2POO
         {
             foreach (Cancion iden in canciones)
             {
-                iden.Informacion();
+                Console.WriteLine(iden.Informacion());
             }
         }
 
