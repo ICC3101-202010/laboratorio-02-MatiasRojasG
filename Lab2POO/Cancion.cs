@@ -9,7 +9,7 @@ namespace Lab2POO
         private string Nombre;
 
 
-        //Metodos para hacer publicos los atributos
+        //Constructor publico
         public Cancion(string Genero, string Artista, string Album, string Nombre)
         {
             this.Genero = Genero;
@@ -18,7 +18,7 @@ namespace Lab2POO
             this.Nombre = Nombre;
 
         }
-        //Constructor
+        //Constructor default
         public Cancion()
         {
             Genero = "Pop";
@@ -26,7 +26,7 @@ namespace Lab2POO
             Album = "Lights";
             Nombre = "Lights";
         }
-        //Method
+        //Metodo
         public string Informacion()
         {
             return "Genero:" + Genero + " " + "Artista:" + Artista + " " + "Album:" + Album + " " + "Nombre:" + Nombre;
