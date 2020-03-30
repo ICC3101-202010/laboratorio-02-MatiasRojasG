@@ -36,6 +36,23 @@ namespace Lab2POO
         {
             return "Genero:" + Genero + " " + "Artista:" + Artista + " " + "Album:" + Album + " " + "Nombre:" + Nombre;
         }
+        public string GetName()
+        {
+            return Nombre;
+        }
+        public string GetArtist()
+        {
+            return Artista;
+        }
+        public string GetAlbum()
+        {
+            return Album;
+        }
+        public string GetGenre()
+        {
+            return Genero;
+        }
+
     }
 
 }

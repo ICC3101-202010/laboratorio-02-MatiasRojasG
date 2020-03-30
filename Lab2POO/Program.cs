@@ -16,6 +16,8 @@ namespace Lab2POO
             string album;
             string nombre;
             string respuesta;
+            string criterio;
+            string valor;
             Espotifai a = new Espotifai();
             Console.WriteLine("Buenos días Matias");
             while (true)
@@ -28,7 +30,9 @@ namespace Lab2POO
                 Console.WriteLine(" ");
                 Console.WriteLine("2) Agregar Cancion");
                 Console.WriteLine(" ");
-                Console.WriteLine("3) Salir de Spotify");
+                Console.WriteLine("3) Ver Canciones por criterio");
+                Console.WriteLine(" ");
+                Console.WriteLine("4) Salir de Spotify");
                 Console.WriteLine(" ");
                 Console.WriteLine(" ");
 
@@ -58,11 +62,23 @@ namespace Lab2POO
                         a.AgregarCancion(cancion1);
 
                     }
-
                     if (respuesta == "3")
+                    {
+                        Console.WriteLine("Ingrese el criterio de búsqueda:");
+                        criterio = Console.ReadLine();
+                        Console.WriteLine("Ingrese el valor del criterio:");
+                        valor = Console.ReadLine();
+                        a.CriteriosPorCancion(criterio, valor);
+                    }
+
+                    if (respuesta == "4")
                     {
                         Console.WriteLine("Saliendo de Spotify...");
                         break;
+                    }
+                    if (respuesta != "1" || respuesta != "2" || respuesta != "3" || respuesta != "4")
+                    {
+                        Console.WriteLine("Porfavor intente de nuevo...");
                     }
                 }
             }
