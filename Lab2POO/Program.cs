@@ -11,17 +11,11 @@ namespace Lab2POO
     {
         public static void Main(string[] args)
         {
-            List<Cancion> canciones = new List<Cancion>();
-            //Cancion ola = new Cancion("a", "b", "c", "d");
-            //Cancion ola1=new Cancion("1", "2", "3", "4");
-            //canciones.Add(ola);
-            //canciones.Add(ola1);
             string genero;
             string artista;
             string album;
             string nombre;
             string respuesta;
-            Spotify.Canciones;
 
             Console.WriteLine("Buenos días Matias");
             Console.WriteLine("Menú: Elija una opcion numerica");
@@ -36,32 +30,34 @@ namespace Lab2POO
 
             if (respuesta == "1")
             {
-                
+                //Aqui deberia estar VerCanciones()
             }
 
 
             if (respuesta == "2")
             {
-                  Console.WriteLine("Ingrese el genero de la cancion:");
-                  genero = Console.ReadLine();
-                  Console.WriteLine("Ingrese al artista de la cancion:");
-                  artista = Console.ReadLine();
-                  Console.WriteLine("Ingrese el album de la cancion:");
-                  album = Console.ReadLine();
-                  Console.WriteLine("Ingrese el nombre de la cancion:");
-                  nombre = Console.ReadLine();
-                  Cancion cancion1 = new Cancion(genero, artista, album, nombre);
-                  
+                Console.WriteLine("Ingrese el genero de la cancion:");
+                genero = Console.ReadLine();
+                Console.WriteLine("Ingrese al artista de la cancion:");
+                artista = Console.ReadLine();
+                Console.WriteLine("Ingrese el album de la cancion:");
+                album = Console.ReadLine();
+                Console.WriteLine("Ingrese el nombre de la cancion:");
+                nombre = Console.ReadLine();
+                Cancion cancion1 = new Cancion(genero, artista, album, nombre);
+                //Aqui deberia estar AgregarCancion()
             }
 
             if (respuesta == "3")
             {
-                  Console.WriteLine("Saliendo de Spotify...");
+                Console.WriteLine("Saliendo de Spotify...");
             }
+
             else
             {
-                    Console.WriteLine("Debe ingresar un numero. ERROR...");
+                Console.WriteLine("Debe ingresar un numero. ERROR...");
             }
-            }
+
         }
     }
+}

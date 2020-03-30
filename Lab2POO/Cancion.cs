@@ -1,4 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
 namespace Lab2POO
 {
     public class Cancion
@@ -7,7 +13,6 @@ namespace Lab2POO
         private string Artista;
         private string Album;
         private string Nombre;
-
 
         //Constructor publico
         public Cancion(string Genero, string Artista, string Album, string Nombre)

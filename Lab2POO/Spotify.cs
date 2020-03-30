@@ -9,31 +9,32 @@ namespace Lab2POO
 {
     public class Spotify
     {
-        private readonly List<Cancion> canciones = new List<Cancion>();
+        public List<Cancion> canciones = new List<Cancion> { };
 
-        public List<Cancion> GetCanciones()
+        public Spotify()
         {
-            return canciones;
+
+        }
+        public bool AgregarCancion(Cancion cancion, List<Cancion> canciones)
+        {
+            if (canciones.Contains(cancion))
+            {
+                return false;
+            }
+            else
+            {
+                canciones.Add(cancion);
+                return true;
+            }
+
+        }
+        public void VerCanciones()
+        {
+            foreach (Cancion iden in canciones)
+            {
+                iden.Informacion();
+            }
         }
 
-        //public bool AgregarCancion(Cancion cancion)
-        //{
-        //   if (canciones.Contains(cancion))
-        //    {
-        //        return false;
-        //    }
-        //    else
-        //    {
-        //        canciones.Add(cancion);
-        //        return true;
-        //    }
-        //}
-        //public void VerCanciones()
-        //{
-        //    foreach (Cancion iden in canciones)
-        //    {
-        //        iden.Informacion();
-        //   }
-        //}
     }
 }
