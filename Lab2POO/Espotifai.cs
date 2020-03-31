@@ -11,6 +11,9 @@ namespace Lab2POO
     {
         public List<Cancion> canciones = new List<Cancion> { };
         public List<Cancion> cancionescrit = new List<Cancion> { };
+        //Lista que contiene Playlists dentro
+        public List<Playlist> listaplaylist = new List<Playlist> { };
+
         public Espotifai()
         {
 
@@ -70,6 +73,10 @@ namespace Lab2POO
                         cancionescrit.Add(iden1);
                     }
                 }
+                if (criterio != "Genero" || criterio != "Album" || criterio != "Genero" || criterio != "Nombre")
+                {
+                    Console.WriteLine("Error");
+                }
             }
             foreach (Cancion iden2 in cancionescrit)
             {
@@ -77,5 +84,36 @@ namespace Lab2POO
             }
         }
 
+        //Metodo crear Playlist
+        public bool GenerarPlaylist(string criterio, string valorCriterio, string nombrePlaylist)
+        {
+            Playlist ola = new Playlist();
+            ola.SetName(nombrePlaylist);
+            ola.SetCriterio(criterio);
+            ola.Setvc(valorCriterio);
+            if (listaplaylist.Contains(ola))
+            {
+                Console.WriteLine("No se pudo agregar debido a que ya existe una playlist con ese nombre");
+                return false;
+            }
+            else
+            {
+                listaplaylist.Add(ola);
+                return true;
+            }
+        }
+        //Metodo ver nombre de las playlist
+        public string VerMisPlaylists()
+        {
+            Console.WriteLine("Playlists guardadas:");
+
+            foreach(Playlist ind in listaplaylist)
+            {
+                Console.WriteLine("Nombre Playlist: "+ind.GetNamep()+" Criterio Playlist: "+ ind.GetCriterio()+" Val Criterio :"+ind.Getvalorcriterio());
+            }
+            return "Fin";
+
+        }
     }
+
 }

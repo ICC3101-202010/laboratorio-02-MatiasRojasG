@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections;
-
-namespace Lab2POO
+﻿namespace Lab2POO
 {
     public class Cancion
     {//Atributos

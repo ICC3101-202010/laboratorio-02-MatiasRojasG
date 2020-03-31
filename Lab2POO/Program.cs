@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections;
 
 namespace Lab2POO
 {
@@ -18,8 +13,15 @@ namespace Lab2POO
             string respuesta;
             string criterio;
             string valor;
+            string crit;
+            string val;
+            string vcrit;
+            string respuesta2;
             Espotifai a = new Espotifai();
-            Console.WriteLine("Buenos días Matias");
+            Playlist b = new Playlist();
+            Console.WriteLine("Nombre de Usuario:");
+            respuesta2 = Console.ReadLine();
+            Console.WriteLine("Buenos días "+respuesta2);
             while (true)
             {
 
@@ -32,7 +34,11 @@ namespace Lab2POO
                 Console.WriteLine(" ");
                 Console.WriteLine("3) Ver Canciones por criterio");
                 Console.WriteLine(" ");
-                Console.WriteLine("4) Salir de Spotify");
+                Console.WriteLine("4) Crear Playlist");
+                Console.WriteLine(" ");
+                Console.WriteLine("5) Ver mis Playlists");
+                Console.WriteLine(" ");
+                Console.WriteLine("6) Salir de Spotify");
                 Console.WriteLine(" ");
                 Console.WriteLine(" ");
 
@@ -70,13 +76,29 @@ namespace Lab2POO
                         valor = Console.ReadLine();
                         a.CriteriosPorCancion(criterio, valor);
                     }
-
+                    //Crear Playlist
                     if (respuesta == "4")
+                    {
+                        Console.WriteLine("Criterio:");
+                        crit = Console.ReadLine();
+                        Console.WriteLine("Valor criterio");
+                        vcrit = Console.ReadLine();
+                        Console.WriteLine("Nombre Playlist");
+                        valor = Console.ReadLine();
+                        a.GenerarPlaylist(crit, vcrit, valor);
+
+                    }
+                    if (respuesta == "5")
+                    {
+                        a.VerMisPlaylists();
+                    }
+
+                    if (respuesta == "6")
                     {
                         Console.WriteLine("Saliendo de Spotify...");
                         break;
                     }
-                    if (respuesta != "1" || respuesta != "2" || respuesta != "3" || respuesta != "4")
+                    if (respuesta != "1" || respuesta != "2" || respuesta != "3" || respuesta != "4" || respuesta != "5" || respuesta != "6")
                     {
                         Console.WriteLine("Porfavor intente de nuevo...");
                     }
